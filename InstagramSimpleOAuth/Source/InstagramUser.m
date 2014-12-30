@@ -62,4 +62,17 @@ NSString *const InstagramFollowersCounterKey = @"counts.followed_by";
 {
     return [self initWithDictionary:nil];
 }
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"%@", @{InstagramIDKey: (self.userID) ?: [NSNull null],
+                                               InstagramUsernameKey: (self.username) ?: [NSNull null],
+                                               InstagramFullNameKey: (self.fullName) ?: [NSNull null],
+                                               InstagramProfilePictureKey: (self.profilePictureURL) ?: [NSNull null],
+                                               InstagramBioKey: (self.bio) ?: [NSNull null],
+                                               InstagramWebsiteKey: (self.website) ?: [NSNull null],
+                                               InstagramMediaCounterKey: (self.mediaCounter) ?: [NSNull null],
+                                               InstagramFollowsCounterKey: (self.followsCounter) ?: [NSNull null],
+                                               InstagramFollowersCounterKey: (self.followersCounter) ?: [NSNull null],
+                                               }];
+}
 @end
