@@ -25,6 +25,11 @@
 @property (copy, nonatomic) NSString *username;
 @property (copy, nonatomic) NSString *fullName;
 @property (strong, nonatomic) NSURL *profilePictureURL;
+@property (copy, nonatomic) NSString *bio;
+@property (strong, nonatomic) NSURL *website;
+@property (strong, nonatomic) NSNumber *mediaCounter;
+@property (strong, nonatomic) NSNumber *followsCounter;
+@property (strong, nonatomic) NSNumber *followersCounter;
 
 - (instancetype)initWithDictionary:(NSDictionary *)userResponse;
 

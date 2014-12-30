@@ -26,6 +26,11 @@ NSString *const InstagramIDKey = @"id";
 NSString *const InstagramUsernameKey = @"username";
 NSString *const InstagramFullNameKey = @"full_name";
 NSString *const InstagramProfilePictureKey = @"profile_picture";
+NSString *const InstagramBioKey = @"bio";
+NSString *const InstagramWebsiteKey = @"website";
+NSString *const InstagramMediaCounterKey = @"counts.media";
+NSString *const InstagramFollowsCounterKey = @"counts.follows";
+NSString *const InstagramFollowersCounterKey = @"counts.followed_by";
 
 @implementation InstagramUser
 
@@ -40,6 +45,14 @@ NSString *const InstagramProfilePictureKey = @"profile_picture";
             self.username = userResponse[InstagramUsernameKey];
             self.fullName = userResponse[InstagramFullNameKey];
             self.profilePictureURL = [NSURL URLWithString:userResponse[InstagramProfilePictureKey]];
+            
+            self.bio = userResponse[InstagramBioKey];
+            if (userResponse[InstagramWebsiteKey]) {
+                self.website = [NSURL URLWithString:userResponse[InstagramWebsiteKey]];
+            }
+            self.mediaCounter = [userResponse valueForKeyPath:InstagramMediaCounterKey];
+            self.followsCounter = [userResponse valueForKeyPath:InstagramFollowsCounterKey];
+            self.followersCounter = [userResponse valueForKeyPath:InstagramFollowersCounterKey];
         }
     }
     return self;
