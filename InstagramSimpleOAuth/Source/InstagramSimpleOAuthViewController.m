@@ -160,14 +160,23 @@ NSString *const InstagramLoginCancelButtonTitle = @"OK";
 
 - (void)dismissViewController
 {
-    /// Added condition here to check if the presentingVC is a NavigationController
-    if ([self.presentingViewController isKindOfClass:[UINavigationController class]] &&
-        self.navigationController) {
-        [self.navigationController popViewControllerAnimated:YES];
-    } else {
+    // If it is a modal view controller, dimiss it
+    if ([self isPresentedModally]) {
         [self.presentingViewController dismissViewControllerAnimated:YES
-                                 completion:nil];
+                                                          completion:nil];
+    // Otherwise, make a pop
+    } else {
+        [self.navigationController popViewControllerAnimated:YES];
     }
+}
+
+/// Check if the viewController was presented modally
+/// See http://stackoverflow.com/questions/2798653/is-it-possible-to-determine-whether-viewcontroller-is-presented-as-modal/16764496#16764496
+- (BOOL)isPresentedModally
+{
+    return (self.presentingViewController.presentedViewController == self ||
+            self.navigationController.presentingViewController.presentedViewController == self.navigationController ||
+            [self.tabBarController.presentingViewController isKindOfClass:[UITabBarController class]]);
 }
 
 - (void)showErrorAlert:(NSError *)error
