@@ -71,6 +71,17 @@ NSString *const InstagramLoginCancelButtonTitle = @"OK";
 }
 
 #pragma mark - View Lifecycle
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    // Delete cookies to allow enter new credentials
+    NSHTTPCookie *cookie;
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (cookie in [storage cookies]){
+        [storage deleteCookie:cookie];
+    }
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
 
 - (void)viewDidAppear:(BOOL)animated
 {
