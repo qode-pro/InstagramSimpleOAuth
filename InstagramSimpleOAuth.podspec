@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
   s.resources             = 'InstagramSimpleOAuth/Source/*.xib'
   s.frameworks            = 'Foundation', 'UIKit'
 
-  s.dependency 'SimpleOAuth2', '0.0.3'
+  s.dependency 'SimpleOAuth2', :git => 'https://github.com/gabmarfer/SimpleOAuth2.git', :branch => 'custom' 
   s.dependency 'MBProgressHUD', '~> 0.9'
 end
