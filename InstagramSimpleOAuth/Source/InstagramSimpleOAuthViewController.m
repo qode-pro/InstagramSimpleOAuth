@@ -48,7 +48,8 @@ NSString *const InstagramLoginCancelButtonTitle = @"OK";
                      callbackURL:(NSURL *)callbackURL
                       completion:(void (^)(InstagramLoginResponse *response, NSError *error))completion
 {
-    self = [super initWithNibName:NSStringFromClass([self class]) bundle:nil];
+    NSBundle *bundle = [NSBundle bundleForClass:[InstagramSimpleOAuthViewController class]];
+    self = [super initWithNibName:NSStringFromClass([InstagramSimpleOAuthViewController class]) bundle:bundle];
     if (self) {
         self.clientID = clientID;
         self.clientSecret = clientSecret;
