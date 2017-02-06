@@ -1,63 +1,42 @@
 PODS:
-  - AFNetworking (2.5.0):
-    - AFNetworking/NSURLConnection (= 2.5.0)
-    - AFNetworking/NSURLSession (= 2.5.0)
-    - AFNetworking/Reachability (= 2.5.0)
-    - AFNetworking/Security (= 2.5.0)
-    - AFNetworking/Serialization (= 2.5.0)
-    - AFNetworking/UIKit (= 2.5.0)
-  - AFNetworking/NSURLConnection (2.5.0):
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.5.0):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.5.0)
-  - AFNetworking/Security (2.5.0)
-  - AFNetworking/Serialization (2.5.0)
-  - AFNetworking/UIKit (2.5.0):
-    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - Expecta (0.3.1)
   - MBProgressHUD (0.9)
-  - OCMock (3.1.1)
-  - RealFakes (0.0.4):
-    - AFNetworking (~> 2.0)
-    - SimpleOAuth2 (~> 0.0.3)
   - SimpleOAuth2 (0.0.3):
-    - AFNetworking (~> 2.0)
-  - Specta (0.3.0.beta1)
-  - Swizzlean (0.2.0)
+    - AFNetworking (~> 3.1)
 
 DEPENDENCIES:
-  - Expecta (~> 0.3.1)
   - MBProgressHUD (~> 0.9)
-  - OCMock (~> 3.1.1)
-  - RealFakes (~> 0.0.4)
-  - SimpleOAuth2 (= 0.0.3)
-  - Specta (from `https://github.com/specta/specta.git`, tag `v0.3.0.beta1`)
-  - Swizzlean (~> 0.2.0)
+  - SimpleOAuth2 (from `https://github.com/gabmarfer/SimpleOAuth2.git`, branch `upgrade-afnetworking`)
 
 EXTERNAL SOURCES:
-  Specta:
-    :git: https://github.com/specta/specta.git
-    :tag: v0.3.0.beta1
+  SimpleOAuth2:
+    :branch: upgrade-afnetworking
+    :git: https://github.com/gabmarfer/SimpleOAuth2.git
 
 CHECKOUT OPTIONS:
-  Specta:
-    :git: https://github.com/specta/specta.git
-    :tag: v0.3.0.beta1
+  SimpleOAuth2:
+    :commit: 70f7ab35d812b42e5ad4765839f0d346c678f748
+    :git: https://github.com/gabmarfer/SimpleOAuth2.git
 
 SPEC CHECKSUMS:
-  AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
-  Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
-  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
-  OCMock: f6cb8c162ab9d5620dddf411282c7b2c0ee78854
-  RealFakes: 386619ccc84d7bf108892068e9a7751dd9a3fff6
-  SimpleOAuth2: e0239a4458ed279d6b8bddccbcf8f782300379ee
-  Specta: 63e8ac8e07db6675c7096d37f77a266a1be4c02d
-  Swizzlean: dc03ad1d847a3748f456982b7ede4e3bad4a9630
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  MBProgressHUD: d8e7ea388dc1549a42e0d219067cf5f2c898fb66
+  SimpleOAuth2: fd413bd589bf616e8e517b6019c4eadad198c95f
 
-COCOAPODS: 0.35.0
+PODFILE CHECKSUM: 6f6c96bb2cd6c94c29306c6691164eae9bba2740
+
+COCOAPODS: 1.2.0
